@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<!-- Mirrored from dashmosagency.github.io/aio-admin-dashboard/src/forms-elem-basic-floating.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Mar 2025 11:14:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Primary Meta Tags -->
+	<meta name="title" content="All-in-One Admin Dashboard Template for SaaS | Efficient & Scalable" />
+	<meta name="description" content="The ultimate SaaS admin dashboard template, designed for versatility and ease of use. Get robust analytics, intuitive interfaces, and flexible customization—all in one streamlined template." />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://aio-saasadmin.com/" />
+	<meta property="og:title" content="All-in-One Admin Dashboard Template for SaaS | Efficient & Scalable" />
+	<meta property="og:description" content="The ultimate SaaS admin dashboard template, designed for versatility and ease of use. Get robust analytics, intuitive interfaces, and flexible customization—all in one streamlined template." />
+	<meta property="og:image" content="../../../res.cloudinary.com/dpmp16y7v/image/upload/v1736910304/AIO%20Admin/Meta/all-in-one-admin-dashboard.png" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://aio-saasadmin.com/" />
+	<meta property="twitter:title" content="All-in-One Admin Dashboard Template for SaaS | Efficient & Scalable" />
+	<meta property="twitter:description" content="The ultimate SaaS admin dashboard template, designed for versatility and ease of use. Get robust analytics, intuitive interfaces, and flexible customization—all in one streamlined template." />
+	<meta property="twitter:image" content="../../../res.cloudinary.com/dpmp16y7v/image/upload/v1736910304/AIO%20Admin/Meta/all-in-one-admin-dashboard.png" />
+
+	<!-- Theme Initialization -->
+	<script src="assets/js/init.js"></script>
+	
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5855ff">
+	<link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- ========== Stylesheets ========== -->
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="assets/fonts/icons/font/bootstrap-icons.css">
+	<!-- All Vendors -->
+	<link rel="stylesheet" href="assets/css/vendor.css">
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="assets/css/aio-admin.css">
+	<!-- Your Custom Code -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<!-- ========== End Stylesheets ========== -->
+
+	<title>Floating Labels</title>
+</head>
+<body class="">
+	<!-- ========== Navbar ========== -->
+	<nav class="navbar">
+		<!-- nav Logo -->
+		<div class="logo-item">
+			<i class="bi bi-list" id="sidebarOpen"></i>
+			<a href="index-2.html">
+				<svg class="logo" width="128" height="53" viewBox="0 0 128 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_289_13794)">
+					<path class="logo-svg" d="M79.7311 34.2624H68.6318L66.5182 39.405H60.8418L71.4942 15.3901H76.9653L87.6539 39.405H81.8446L79.7311 34.2624ZM77.9798 30.0416L74.1875 20.8481L70.3951 30.0416H77.9798Z" fill="#5956FF"/>
+					<path class="logo-svg"  d="M90.1416 15.3901H95.6731V39.405H90.1416V15.3901Z" fill="#5956FF"/>
+					<path class="logo-svg"  d="M106.217 38.2043C104.225 37.1248 102.667 35.6451 101.543 33.7652C100.42 31.8731 99.8525 29.7627 99.8525 27.3976C99.8525 25.0446 100.42 22.9221 101.543 21.03C102.667 19.1379 104.225 17.6582 106.217 16.5909C108.21 15.5114 110.445 14.9778 112.933 14.9778C115.42 14.9778 117.643 15.5114 119.623 16.5909C121.604 17.6704 123.162 19.1501 124.297 21.03C125.433 22.9221 126 25.0325 126 27.3976C126 29.7506 125.433 31.8731 124.297 33.7652C123.162 35.6572 121.604 37.1369 119.623 38.2043C117.643 39.2837 115.408 39.8174 112.933 39.8174C110.445 39.8174 108.21 39.2837 106.217 38.2043ZM116.761 34.1048C117.896 33.4498 118.79 32.5402 119.442 31.3758C120.094 30.2114 120.421 28.8773 120.421 27.3976C120.421 25.9058 120.094 24.5837 119.442 23.4194C118.79 22.255 117.896 21.3454 116.761 20.6904C115.626 20.0355 114.346 19.708 112.933 19.708C111.519 19.708 110.239 20.0355 109.104 20.6904C107.969 21.3454 107.075 22.255 106.423 23.4194C105.771 24.5837 105.444 25.9179 105.444 27.3976C105.444 28.8894 105.771 30.2114 106.423 31.3758C107.075 32.5402 107.969 33.4498 109.104 34.1048C110.239 34.7597 111.519 35.0872 112.933 35.0872C114.346 35.0872 115.614 34.7597 116.761 34.1048Z" fill="#5956FF"/>
+					<path class="logo-svg"  d="M32.7132 25.2993L5.4421 41.3092C3.28022 39.4777 2 36.7609 2 33.8621V19.1257C2 15.6448 3.84786 12.4307 6.85517 10.6842L19.5728 3.3099C22.5801 1.56337 26.2758 1.56337 29.2831 3.3099L32.7132 5.29901V25.2993Z" fill="#5956FF"/>
+					<path class="logo-svg"  d="M34.5735 29.0349L45.7573 38.3619C44.924 39.9871 43.6317 41.3698 41.9891 42.3159L29.2715 49.6901C26.2642 51.4366 22.5684 51.4366 19.5611 49.6901L9.41602 43.7956L34.5735 29.0349Z" fill="#5956FF"/>
+					<path d="M46.8557 19.1257V33.8621L36.8555 25.5296V7.70044L42.0005 10.6841C45.0078 12.4306 46.8557 15.6447 46.8557 19.1257Z" fill="#9EB3E8"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_289_13794">
+					<rect width="124" height="49" fill="white" transform="translate(2 2)"/>
+					</clipPath>
+					</defs>
+				</svg>
+			</a>
+		</div>
+		<!-- /nav Logo -->
+		<!-- Search -->
+		<div class="search-bar">
+			<input class="form-control rounded-pill" type="text" placeholder="Search" />
+		</div>
+		<!-- /Search -->
+		<!-- Navbar Content -->
+		<div class="navbar-content">
+			<div class="navbar-icons d-flex align-items-center">
+
+				<!-- Light<->Dark Switch -->
+				<div class="theme-switcher">
+					<span class="toggle" data-theme-toggle-value="light" aria-pressed="false">
+						<div class="btn btn-icon">
+							<i class="bi bi-brightness-high"></i>
+						</div>
+					</span>
+
+					<span class="toggle active" data-theme-toggle-value="dark" aria-pressed="true">
+						<div class="btn btn-icon">
+							<i class="bi bi-moon"></i>
+						</div>
+					</span>
+					<span class="toggle" data-theme-toggle-value="auto" aria-pressed="false">
+						<div class="btn btn-icon">
+							<i class="bi bi-laptop"></i>
+						</div>
+					</span>
+				</div>
+				<!-- /Light<->Dark Switch -->
+
+				<!-- notifications dropdown -->
+				<span class="see-notifications dropdown">
+					<div class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">
+						<i class="bi bi-bell position-relative"></i>
+					</div>
+					<div class="dropdown-menu notifications-dropdown shadow">
+						<div class="dropdown-heading d-flex justify-content-between">
+							<h6 class="dropdown-title">Notifications</h6>
+							<a href="#" class="text-muted">Mark all read</a>
+						</div>
+						<ul class="m-0 p-0">
+							<li class="notification nav-notification">
+								<a href="pages-notifications.html">
+									<div class="notification-img bg-danger-subtle">
+										<i class="bi bi-x-octagon-fill text-danger"></i>
+									</div>
+									<div class="notification-content text-truncate text-body px-3">
+										Attention! App server
+										<a href="#" class="notification-link">Srvr-1H2C</a>  is currently offline
+										<div class="notification-time">
+											4hours ago
+										</div>
+									</div>
+								</a>
+							</li>
+							
+							<li class="notification nav-notification">
+								<a href="pages-notifications.html">
+									<div class="notification-img bg-success-subtle">
+										<i class="bi bi-check-circle-fill text-success"></i>
+									</div>
+									<div class="notification-content text-truncate px-3">
+										Congratulations!! 🎈🎉🎊🕺.
+										<a href="#" class="notification-link">10K Subs</a> is Marked complete ✅.
+										<div class="notification-time">
+											1 hour ago
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="notification nav-notification">
+								<a href="pages-notifications.html">
+									<div class="notification-img avatar">
+										<img src="assets/img/avatars/Memoji/no-bg/Memoji-49.png" alt="" srcset="">
+									</div>
+									<div class="notification-content text-truncate px-3">
+										<a href="#" class="notification-link">Jenna commented 1</a>
+											on 
+										<a href="#" class="notification-link">Project 1</a> 
+										"Time extension limit is key for great customer UX since many customers are most likely to download and use the app on a daily basis Dont you think"
+										<div class="notification-time">
+											4hours ago
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="notification nav-notification">
+								<a href="pages-notifications.html">
+									<div class="notification-img bg-info-subtle">
+										<i class="bi bi-x-octagon-fill text-info"></i>
+									</div>
+									<div class="notification-content text-truncate px-3">
+										Data storage for 
+										<a href="#" class="notification-link"> Client Bucket DB </a> 
+										is exceeding this monthly Quota
+										<div class="notification-time">
+											4hours ago
+										</div>
+									</div>
+								</a>
+							</li>
+							<div class="cta p-3">
+								<a href="pages-notifications.html" class="btn btn-primary w-100" role="button">
+									See All Notifications
+								</a>
+							</div>
+						</ul>
+					</div>
+				</span>
+				<!-- /notifications dropdown -->
+			</div>
+			<!-- Profile Dropdown -->
+			<div class="dropdown">
+				<img src="assets/img/avatars/Memoji/colored-bg/Memoji-21.png" alt="" class="profile dropdown-toggle" data-bs-toggle="dropdown" />
+				<div class="dropdown-menu profile-dropdown shadow">
+					<div class="user-info">
+						<div class="user-avatar">
+							<img src="assets/img/avatars/Memoji/colored-bg/Memoji-21.png" alt="" class="profile-img" />
+						</div>
+						<div class="user-bio">
+							<h6 class="username">John Doe</h6>
+							<p class="user-role">
+								<span class="role">Admin</span>
+							</p>
+						</div>
+					</div>
+				
+					<a href="#" class="online-status border-top border-bottom">
+						<span class="status-circle"></span>
+						<span class="status-text">Set yourself as away</span>
+					</a>
+				
+					<a class="account-profile" href="#">
+						<div class="profile">
+							<i class="bi bi-person"></i>
+							<span>Profile</span>
+						</div>
+					</a>
+					<a class="account-help" href="pages-faq.html">
+						<div class="help">
+							<i class="bi bi-headset"></i>
+							<span>Help Center</span>
+						</div>
+					</a>
+					<a class="account-settings" href="#">
+						<div class="settings">
+							<i class="bi bi-gear"></i>
+							<span>Account Settings</span>
+						</div>
+					</a>
+					<a class="account-switch" href="#">
+						<div class="switch-btn">
+							<i class="bi bi-repeat"></i>
+							<span>Switch Accounts</span>
+						</div>
+					</a>
+					<a class="log-out" href="#!">
+						<div class="log-btn">
+							<i class="bi bi-box-arrow-right"></i>
+							<span class="">Log out</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!-- /Profile Dropdown -->
+		</div>
+		<!-- /Navbar Content -->
+	</nav>
+	<!-- ========== End Navbar ========== -->
+		
+	<!-- ========== Sidebar ========== -->
+	<div class="sidebar">
+		<div class="menu-content">
+			<!-- Dashboards -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Dashboards</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<div class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-grid-1x2"></i>
+							</span>
+							<span class="navlink">Dashboards</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="index-2.html" class="nav-link sublink">Analytics</a>
+					</div>
+				</li>
+			</ul>
+			<!-- /Dashboard -->
+	
+			<!-- Apps -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Apps</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-file-earmark-spreadsheet"></i>
+							</span>
+							<span class="navlink">Invoice</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="app-invoice-create.html" class="nav-link sublink">Create Invoice</a>
+						<a href="app-invoice-preview.html" class="nav-link sublink">Preview Invoice</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-folder"></i>
+							</span>
+							<span class="navlink">File Manager</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="app-file-manager.html" class="nav-link sublink">File Storage</a>
+						<a href="app-file-manager-folder.html" class="nav-link sublink">Folder Manager</a>
+					</div>
+				</li>
+			</ul>
+			<!-- /Apps -->
+	
+			<!-- Pages -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Pages</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<a href="pages-notifications.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-bell"></i>
+						</span>
+						<span class="navlink">Notifications</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="blank.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-file"></i>
+						</span>
+						<span class="navlink">Blank Page</span>
+					</a>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-info-circle"></i>
+							</span>
+							<span class="navlink">FAQ</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="pages-faq.html" class="nav-link sublink">FAQs</a>
+						<a href="pages-faq-article.html" class="nav-link sublink">Article</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-cloud-arrow-up"></i>
+							</span>
+							<span class="navlink">Integrations</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="pages-integrations-marketplace.html" class="nav-link sublink">Integrations Marketplace</a>
+						<a href="pages-integration-app.html" class="nav-link sublink">App Integration</a>
+						<a href="pages-my-integrations.html" class="nav-link sublink">My Integrations</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-currency-dollar"></i>
+							</span>
+							<span class="navlink">Billing</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="pages-pricing-3col-basic.html" class="nav-link sublink">3 Col Basic</a>
+						<a href="pages-pricing-3col-advanced.html" class="nav-link sublink">3 Col Advanced</a>
+						<a href="pages-pricing-slider.html" class="nav-link sublink">Pricing Slider</a>
+						<a href="pages-pricing-checkout-single.html" class="nav-link sublink">Checkout Single</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-briefcase"></i>
+							</span>
+							<span class="navlink">Service Pages</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="service-basic-404.html" class="nav-link sublink">Basic 404</a>
+						<a href="service-basic-500.html" class="nav-link sublink">Basic 500</a>
+						<a href="service-split-404.html" class="nav-link sublink">Split 404</a>
+						<a href="service-split-500.html" class="nav-link sublink">Split 500</a>
+					</div>
+				</li>
+			</ul>
+			<!-- /Pages -->
+	
+			<!-- Authentication -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Authentication</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-window"></i>
+							</span>
+							<span class="navlink">Auth Basic</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="auth-basic-register.html" class="nav-link sublink">Register</a>
+						<a href="auth-basic-login.html" class="nav-link sublink">Login</a>
+						<a href="auth-basic-2fa.html" class="nav-link sublink">Two Factor Authentication</a>
+						<a href="auth-basic-verify-email.html" class="nav-link sublink">Verify Account</a>
+						<a href="auth-basic-forgot-password.html" class="nav-link sublink">Forgot Password</a>
+						<a href="auth-basic-reset-password.html" class="nav-link sublink">Reset Password</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-layout-text-window"></i>
+							</span>
+							<span class="navlink">Auth Card</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="auth-card-register.html" class="nav-link sublink">Register</a>
+						<a href="auth-card-login.html" class="nav-link sublink">Login</a>
+						<a href="auth-card-2fa.html" class="nav-link sublink">Two Factor Authentication</a>
+						<a href="auth-card-verify-email.html" class="nav-link sublink">Verify Account</a>
+						<a href="auth-card-forgot-password.html" class="nav-link sublink">Forgot Password</a>
+						<a href="auth-card-reset-password.html" class="nav-link sublink">Reset Password</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-layout-split"></i>
+							</span>
+							<span class="navlink">Auth Split</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="auth-split-register.html" class="nav-link sublink">Register</a>
+						<a href="auth-split-login.html" class="nav-link sublink">Login</a>
+						<a href="auth-split-2fa.html" class="nav-link sublink">Two Factor Authentication</a>
+						<a href="auth-split-verify-email.html" class="nav-link sublink">Verify Account</a>
+						<a href="auth-split-forgot-password.html" class="nav-link sublink">Forgot Password</a>
+						<a href="auth-split-reset-password.html" class="nav-link sublink">Reset Password</a>
+					</div>
+				</li>
+			</ul>
+			<!-- /Authentication -->
+	
+			<!-- Modules -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">UI Modules</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-postcard"></i>
+							</span>
+							<span class="navlink">Cards</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="cards-analytics.html" class="nav-link sublink">Cards Analytics</a>
+						<a href="cards-statistics.html" class="nav-link sublink">Cards Statistics</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-table"></i>
+							</span>
+							<span class="navlink">Tables</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="tables-bootstrap.html" class="nav-link sublink">Bootstrap Table</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-box"></i>
+							</span>
+							<span class="navlink">Components</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="components-accordion.html" class="nav-link sublink">Accordion</a>
+						<a href="components-alerts.html" class="nav-link sublink">Alerts</a>
+						<a href="components-avatar.html" class="nav-link sublink">Avatars</a>
+						<a href="components-badges.html" class="nav-link sublink">Badges</a>
+						<a href="components-buttons.html" class="nav-link sublink">Buttons</a>
+						<a href="components-button-group.html" class="nav-link sublink">Button group</a>
+						<a href="components-cards.html" class="nav-link sublink">Cards</a>
+						<a href="components-carousel.html" class="nav-link sublink">Carousel</a>
+						<a href="components-collapse.html" class="nav-link sublink">Collapse</a>
+						<a href="components-dropdown.html" class="nav-link sublink">Dropdowns</a>
+						<a href="components-listgroup.html" class="nav-link sublink">Listgroup</a>
+						<a href="components-modal.html" class="nav-link sublink">Modal</a>
+						<a href="components-navs%26tabs.html" class="nav-link sublink">Navs & Tabs</a>
+						<a href="components-offcanvas.html" class="nav-link sublink">Offcanvas</a>
+						<a href="components-pagination.html" class="nav-link sublink">Pagination</a>
+						<a href="components-placeholder.html" class="nav-link sublink">Placeholder</a>
+						<a href="components-popover.html" class="nav-link sublink">Popover</a>
+						<a href="components-progress.html" class="nav-link sublink">Progress bar</a>
+						<a href="components-spinners.html" class="nav-link sublink">Spinners</a>
+						<a href="components-toasts.html" class="nav-link sublink">Toasts</a>
+						<a href="components-tooltips.html" class="nav-link sublink">Toooltips</a>
+					</div>
+				</li>
+			</ul>
+			<!-- /Modules -->
+	
+			<!-- Forms -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Forms</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<a href="forms-basic.html" class="nav-link sublink">
+						<span class="navlink-icon">
+						<i class="bi bi-layout-sidebar"></i>
+						</span>
+						<span class="navlink">Basic Forms</span>
+					</a>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item show-submenu">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-toggle-off"></i>
+							</span>
+							<span class="navlink">Basic Elements</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<div class="menu-items submenu">
+						<a href="forms-elem-basic-checks.html" class="nav-link sublink">Checks</a>
+						<a href="forms-elem-basic-range.html" class="nav-link sublink">Range</a>
+						<a href="forms-elem-basic-select.html" class="nav-link sublink">Select</a>
+						<a href="forms-elem-basic-floating.html" class="nav-link sublink active">Floating Labels</a>
+					</div>
+				</li>
+				<li class="item">
+					<div href="#" class="nav-link submenu-item">
+						<div class="">
+							<span class="navlink-icon">
+								<i class="bi bi-layout-sidebar-inset-reverse"></i>
+							</span>
+							<span class="navlink">Advanced Forms</span>
+						</div>
+						<div class="arrow-left">
+							<i class="bi bi-chevron-right"></i>
+						</div>
+					</div>
+					<ul class="menu-items submenu">
+						<a href="forms-adv-interactive.html" class="nav-link sublink">Interactive Form</a>
+						<a href="forms-adv-validation.html" class="nav-link sublink">Form Validation</a>
+					</ul>
+				</li>
+				<li class="item">
+					<a href="forms-layout.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-window"></i>
+						</span>
+						<span class="navlink">Form Layout</span>
+					</a>
+				</li>
+			</ul>
+			<!-- /Forms -->
+	
+					<!-- Bonus -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Bonus</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<a href="bonus-emails.html" class="nav-link sublink">
+						<span class="navlink-icon">
+						<i class="bi bi-envelope-at"></i>
+						</span>
+						<span class="navlink">
+							Emails
+							<span class="badge bg-danger text-white">New</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+			<!-- /Bonus -->
+	
+			<!-- Extensions -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Extensions</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<a href="extension-autocomplete.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">Autocomplete</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="extension-choices.html" class="nav-link sublink">
+						<span class="navlink-icon">
+						<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">Choices</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="extension-driverjs.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">Driver</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="extension-dropzone.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">Dropzone</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="extension-flatpickr.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">FlatPickr</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="extension-freezeui.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">Freeze UI</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="extension-nouislider.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">noUI Slider</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="extension-swiperjs.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-folder"></i>
+						</span>
+						<span class="navlink">Swiper</span>
+					</a>
+				</li>
+			</ul>
+			<!-- /Extensions -->
+	
+			<!-- Documentation -->
+			<div class="menu-separator">
+				<div class="menu-separator-title">Documentation</div>
+			</div>
+			<ul class="menu-items">
+				<li class="item">
+					<a href="https://dashmosagency.github.io/aio-admin-dashboard/docs/index.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-flag"></i>
+						</span>
+						<span class="navlink">Getting Started</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://dashmosagency.github.io/aio-admin-dashboard/docs/customization.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-pencil"></i>
+						</span>
+						<span class="navlink">Customization</span>
+					</a>
+				</li>
+				<li class="item">
+				<a href="https://dashmosagency.github.io/aio-admin-dashboard/docs/design-system.html" class="nav-link sublink">
+					<span class="navlink-icon">
+					<i class="bi bi-bezier"></i>
+					</span>
+					<span class="navlink">Design System</span>
+				</a>
+				</li>
+				<li class="item">
+					<a href="https://dashmosagency.github.io/aio-admin-dashboard/docs/vendors.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-plug"></i>
+						</span>
+						<span class="navlink">Vendor Plugins</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://dashmosagency.github.io/aio-admin-dashboard/docs/changelog.html" class="nav-link sublink">
+						<span class="navlink-icon">
+							<i class="bi bi-bezier2"></i>
+						</span>
+						<span class="navlink">Changelog</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://icons.getbootstrap.com/" class="nav-link sublink" target="_blank">
+						<span class="navlink-icon">
+							<i class="bi bi-grid"></i>
+						</span>
+						<span class="navlink">Icons</span>
+					</a>
+				</li>
+				<li class="item">
+					<a href="https://aio-saasadmin.com/support.html" class="nav-link sublink" target="_blank">
+						<span class="navlink-icon">
+							<i class="bi bi-headset"></i>
+						</span>
+						<span class="navlink">Contact Support</span>
+					</a>
+				</li>
+			</ul>
+			<!-- /Documentation -->
+	
+			<!-- Sidebar Open / Close -->
+			<div class="bottom-content">
+				<div class="bottom expand-sidebar">
+					<span>Expand</span>
+					<i class="bi bi-arrow-bar-right"></i>
+				</div>
+				<div class="bottom collapse-sidebar">
+					<span>Collapse</span>
+					<i class="bi bi-arrow-bar-left"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ========== End Sidebar ========== -->
+
+	<!-- ========== Start Main ========== -->
+	<div class="main">
+		<div class="row g-2 ">
+			<!-- col -->
+			<div class="col-lg-6">
+				<!-- card -->
+				<div class="card h-100">
+					<div class="card-top d-flex justify-content-between">
+						<div class="card-heading d-flex align-self-center">
+							Example
+						</div>
+						<div class="">
+							<a href="#!" class="border code-modal-trigger"  data-bs-toggle="modal" data-bs-target="#floatingExample">
+								<i class="bi bi-code"></i>
+							</a>
+						</div>
+					</div>
+					<p class="component-desc">
+						For floating labels, use <code>.form-floating</code> class on the <code>.form-group</code> container.
+					</p>
+					<div class="component-area border-top">
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+							<label for="floatingInput">Email address</label>
+						</div>
+						<div class="form-floating">
+							<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+							<label for="floatingPassword">Password</label>
+						</div>
+					</div>
+				</div>
+				<!-- /card -->
+				<!-- Modal -->
+				<div class="modal fade code-modal" id="floatingExample" tabindex="-1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title text-center w-100 fs-5" id="exampleModalLabel">Code</h1>
+								<a href="#!" class="btn btn-dismiss border" data-bs-dismiss="modal">
+									<i class="bi bi-x rounded-pill"></i>
+								</a>
+							</div>
+							<div class="modal-body">
+								<!-- Code Available to Copy -->
+								<h6 class="pb-2 code-title" id="html1">
+									HTML Code for this Element
+								</h6>
+								<!-- Code Available to Copy -->
+								<div class="" id="element-code1">
+									<pre class=""><code class="language-html">&lt;div class=&quot;form-floating mb-3&quot;&gt;
+&Tab;&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;floatingInput&quot; placeholder=&quot;name@example.com&quot;&gt;
+&Tab;&lt;label for=&quot;floatingInput&quot;&gt;Email address&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-floating&quot;&gt;
+&Tab;&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;floatingPassword&quot; placeholder=&quot;Password&quot;&gt;
+&Tab;&lt;label for=&quot;floatingPassword&quot;&gt;Password&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+								<!-- Code Available to Copy -->
+							</div>
+							<div class="modal-footer">
+								<a href="#html1" class="copy-clipboard-btn btn btn-primary" data-clipboard-target="#element-code1" data-clipboard-action="copy">
+									<i class="bi bi-clipboard pe-1"></i>
+									Copy HTML
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Modal -->
+			</div>
+			<!-- /col -->
+			 
+			<!-- col -->
+			<div class="col-lg-6">
+				<!-- card -->
+				<div class="card h-100">
+					<div class="card-top d-flex justify-content-between">
+						<div class="card-heading d-flex align-self-center">
+							Textarea
+						</div>
+						<div class="">
+							<a href="#!" class="border code-modal-trigger"  data-bs-toggle="modal" data-bs-target="#floatingTextarea">
+								<i class="bi bi-code"></i>
+							</a>
+						</div>
+					</div>
+					<p class="component-desc">
+						Textarea with floating label
+					</p>
+					<div class="component-area border-top">
+						<div class="form-floating">
+							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
+							<label for="floatingTextarea2">Comments</label>
+						</div>
+					</div>
+				</div>
+				<!-- /card -->
+				<!-- Modal -->
+				<div class="modal fade code-modal" id="floatingTextarea" tabindex="-1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title text-center w-100 fs-5" id="exampleModalLabel">Code</h1>
+								<a href="#!" class="btn btn-dismiss border" data-bs-dismiss="modal">
+									<i class="bi bi-x rounded-pill"></i>
+								</a>
+							</div>
+							<div class="modal-body">
+								<h6 class="pb-2 code-title" id="html2">
+									HTML Code for this Element
+								</h6>
+								<!-- Code Available to Copy -->
+								<div class="" id="element-code2">
+									<pre class=""><code class="language-html">&lt;div class=&quot;form-floating&quot;&gt;
+&Tab;&lt;textarea class=&quot;form-control&quot; placeholder=&quot;Leave a comment here&quot; style=&quot;height: 150px&quot;&gt;&lt;/textarea&gt;
+&Tab;&lt;label for=&quot;floatingTextarea2&quot;&gt;Comments&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+								<!-- Code Available to Copy -->
+							</div>
+							<div class="modal-footer">
+								<a href="#html2" class="copy-clipboard-btn btn btn-primary" data-clipboard-target="#element-code2" data-clipboard-action="copy">
+									<i class="bi bi-clipboard pe-1"></i>
+									Copy HTML
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Modal -->
+			</div>
+			<!-- /col -->
+			 
+			<!-- col -->
+			<div class="col-lg-6">
+				<!-- card -->
+				<div class="card h-100">
+					<div class="card-top d-flex justify-content-between">
+						<div class="card-heading d-flex align-self-center">
+							Radio
+						</div>
+						<div class="">
+							<a href="#!" class="border code-modal-trigger"  data-bs-toggle="modal" data-bs-target="#floatingSelects">
+								<i class="bi bi-code"></i>
+							</a>
+						</div>
+					</div>
+					<p class="component-desc">
+						Form Select with floating label
+					</p>
+					<div class="component-area border-top">
+						<div class="form-floating">
+							<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+							  <option selected>Open this select menu</option>
+							  <option value="1">One</option>
+							  <option value="2">Two</option>
+							  <option value="3">Three</option>
+							</select>
+							<label for="floatingSelect">Works with selects</label>
+						</div>
+					</div>
+				</div>
+				<!-- /card -->
+				<!-- Modal -->
+				<div class="modal fade code-modal" id="floatingSelects" tabindex="-1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title text-center w-100 fs-5" id="exampleModalLabel">Code</h1>
+								<a href="#!" class="btn btn-dismiss border" data-bs-dismiss="modal">
+									<i class="bi bi-x rounded-pill"></i>
+								</a>
+							</div>
+							<div class="modal-body">
+								<!-- Code Available to Copy -->
+								<h6 class="pb-2 code-title" id="html1">
+									HTML Code for this Element
+								</h6>
+								<!-- Code Available to Copy -->
+								<div class="" id="element-code3">
+									<pre class=""><code class="language-html">&lt;div class=&quot;form-floating&quot;&gt;
+&Tab;&lt;select class=&quot;form-select&quot; id=&quot;floatingSelect&quot; aria-label=&quot;Floating label select example&quot;&gt;
+&Tab;&Tab;&lt;option selected&gt;Open this select menu&lt;/option&gt;
+&Tab;&Tab;&lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+&Tab;&Tab;&lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+&Tab;&Tab;&lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&Tab;&lt;/select&gt;
+&Tab;&lt;label for=&quot;floatingSelect&quot;&gt;Works with selects&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+								<!-- Code Available to Copy -->
+							</div>
+							<div class="modal-footer">
+								<a href="#html1" class="copy-clipboard-btn btn btn-primary" data-clipboard-target="#element-code3" data-clipboard-action="copy">
+									<i class="bi bi-clipboard pe-1"></i>
+									Copy HTML
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Modal -->
+			</div>
+			<!-- /col -->
+			 
+			<!-- col -->
+			<div class="col-lg-6">
+				<!-- card -->
+				<div class="card h-100">
+					<div class="card-top d-flex justify-content-between">
+						<div class="card-heading d-flex align-self-center">
+							With Validation
+						</div>
+						<div class="">
+							<a href="#!" class="border code-modal-trigger"  data-bs-toggle="modal" data-bs-target="#floatingValidation">
+								<i class="bi bi-code"></i>
+							</a>
+						</div>
+					</div>
+					<p class="component-desc">
+						Form floating with validation styles
+					</p>
+					<div class="component-area border-top">
+						<form class="form-floating">
+							<input type="email" class="form-control is-valid" id="floatingInputValid" placeholder="name@example.com" value="test@example.com">
+							<label for="floatingInputValid">Correct input</label>
+						</form>
+					</div>
+				</div>
+				<!-- /card -->
+				<!-- Modal -->
+				<div class="modal fade code-modal" id="floatingValidation" tabindex="-1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title text-center w-100 fs-5" id="exampleModalLabel">Code</h1>
+								<a href="#!" class="btn btn-dismiss border" data-bs-dismiss="modal">
+									<i class="bi bi-x rounded-pill"></i>
+								</a>
+							</div>
+							<div class="modal-body">
+								<h6 class="pb-2 code-title" id="html2">
+									HTML Code for this Element
+								</h6>
+								<!-- Code Available to Copy -->
+								<div class="" id="element-code4">
+									<pre class=""><code class="language-html">&lt;form class=&quot;form-floating&quot;&gt;
+&Tab;&lt;input type=&quot;email&quot; class=&quot;form-control is-valid&quot; id=&quot;floatingInputValid&quot; placeholder=&quot;name@example.com&quot; value=&quot;test@example.com&quot;&gt;
+&Tab;&lt;label for=&quot;floatingInputValid&quot;&gt;Correct input&lt;/label&gt;
+&lt;/form&gt;</code></pre>
+								</div>
+								<!-- Code Available to Copy -->
+							</div>
+							<div class="modal-footer">
+								<a href="#html2" class="copy-clipboard-btn btn btn-primary" data-clipboard-target="#element-code4" data-clipboard-action="copy">
+									<i class="bi bi-clipboard pe-1"></i>
+									Copy HTML
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Modal -->
+			</div>
+			<!-- /col -->
+			<!-- col -->
+			<div class="col-lg-6">
+				<!-- card -->
+				<div class="card h-100">
+					<div class="card-top d-flex justify-content-between">
+						<div class="card-heading d-flex align-self-center">
+							Disabled
+						</div>
+						<div class="">
+							<a href="#!" class="border code-modal-trigger"  data-bs-toggle="modal" data-bs-target="#disabledFloating">
+								<i class="bi bi-code"></i>
+							</a>
+						</div>
+					</div>
+					<p class="component-desc">
+						Add <code>.disabled</code> to inputs to make them appear disabled.
+					</p>
+					<div class="component-area border-top">
+						<div class="form-floating mb-3">
+							<input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com" disabled>
+							<label for="floatingInputDisabled">Email address</label>
+						</div>
+						<div class="form-floating mb-3">
+							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" disabled></textarea>
+							<label for="floatingTextareaDisabled">Comments</label>
+						</div>
+						  	<div class="form-floating mb-3">
+							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 100px" disabled></textarea>
+							<label for="floatingTextarea2Disabled">Comments</label>
+						</div>
+						<div class="form-floating">
+							<select class="form-select" id="floatingSelectDisabled" aria-label="Floating label disabled select example" disabled>
+								<option selected>Open this select menu</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+							<label for="floatingSelectDisabled">Works with selects</label>
+						</div>
+					</div>
+				</div>
+				<!-- /card -->
+				<!-- Modal -->
+				<div class="modal fade code-modal" id="disabledFloating" tabindex="-1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title text-center w-100 fs-5" id="exampleModalLabel">Code</h1>
+								<a href="#!" class="btn btn-dismiss border" data-bs-dismiss="modal">
+									<i class="bi bi-x rounded-pill"></i>
+								</a>
+							</div>
+							<div class="modal-body">
+								<!-- Code Available to Copy -->
+								<h6 class="pb-2 code-title" id="html1">
+									HTML Code for this Element
+								</h6>
+								<!-- Code Available to Copy -->
+								<div class="" id="element-code5">
+									<pre class=""><code class="language-html">&lt;div class=&quot;form-floating mb-3&quot;&gt;
+&Tab;&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;floatingInputDisabled&quot; placeholder=&quot;name@example.com&quot; disabled&gt;
+&Tab;&lt;label for=&quot;floatingInputDisabled&quot;&gt;Email address&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-floating mb-3&quot;&gt;
+&Tab;&lt;textarea class=&quot;form-control&quot; placeholder=&quot;Leave a comment here&quot; id=&quot;floatingTextareaDisabled&quot; disabled&gt;&lt;/textarea&gt;
+&Tab;&lt;label for=&quot;floatingTextareaDisabled&quot;&gt;Comments&lt;/label&gt;
+&lt;/div&gt;
+&Tab;&lt;div class=&quot;form-floating mb-3&quot;&gt;
+&Tab;&lt;textarea class=&quot;form-control&quot; placeholder=&quot;Leave a comment here&quot; id=&quot;floatingTextarea2Disabled&quot; style=&quot;height: 100px&quot; disabled&gt;&lt;/textarea&gt;
+&Tab;&lt;label for=&quot;floatingTextarea2Disabled&quot;&gt;Comments&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-floating&quot;&gt;
+&Tab;&lt;select class=&quot;form-select&quot; id=&quot;floatingSelectDisabled&quot; aria-label=&quot;Floating label disabled select example&quot; disabled&gt;
+&Tab;&Tab;&lt;option selected&gt;Open this select menu&lt;/option&gt;
+&Tab;&Tab;&lt;option value=&quot;1&quot;&gt;One&lt;/option&gt;
+&Tab;&Tab;&lt;option value=&quot;2&quot;&gt;Two&lt;/option&gt;
+&Tab;&Tab;&lt;option value=&quot;3&quot;&gt;Three&lt;/option&gt;
+&Tab;&lt;/select&gt;
+&Tab;&lt;label for=&quot;floatingSelectDisabled&quot;&gt;Works with selects&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+								</div>
+								<!-- Code Available to Copy -->
+							</div>
+							<div class="modal-footer">
+								<a href="#html1" class="copy-clipboard-btn btn btn-primary" data-clipboard-target="#element-code5" data-clipboard-action="copy">
+									<i class="bi bi-clipboard pe-1"></i>
+									Copy HTML
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Modal -->
+			</div>
+			<!-- /col -->
+		</div>
+	</div>
+	<!-- ========== End Main ========== -->
+		
+	<!-- ========== Start Buy Now ========== -->
+	<a href="https://ctiny.me/aio-admin-buy-now" target="_blank" class="btn btn-danger buy-now btn-lg">Buy Now</a>
+	<!-- ========== End Buy Now ========== -->
+	
+		
+	<!-- ========== Start Scripts ========== -->
+	<!-- All Vendors -->
+	<script src="assets/js/vendor.js"></script>
+	<!-- Theme JS -->
+	<script src="assets/js/aio.admin.js"></script>
+	<!-- Your Custom Code -->
+	<script src="assets/js/custom.js"></script>
+
+	<!-- Page Level Javasctipt -->
+	<script>
+		
+	</script>
+	<!-- /Page Level Javasctipt -->
+	<!-- ========== End Scripts ========== -->
+</body>
+
+<!-- Mirrored from dashmosagency.github.io/aio-admin-dashboard/src/forms-elem-basic-floating.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Mar 2025 11:14:34 GMT -->
+</html>
