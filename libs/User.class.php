@@ -24,35 +24,35 @@ class User
         return "Invalid Username and Password";
     }
 
-    public static function setCategory($cate)
-    {
-        $conn = Database::getConnect();
+    // public static function setCategory($cate)
+    // {
+    //     $conn = Database::getConnect();
         
-        // Insert data into database
-        $sql = "INSERT INTO `cate` (`category`, `created_at`)
-                VALUES ('$cate', NOW())";
+    //     // Insert data into database
+    //     $sql = "INSERT INTO `cate` (`category`, `created_at`)
+    //             VALUES ('$cate', NOW())";
 
-        if ($conn->query($sql)) {
-            header("Location: viewCate.php");
-            exit;
-        } else {
-            return "Error occurred while saving data: " . $conn->error;
-        }
-    }
-    public static function updateCategory($getID, $cate, $conn)
-    {
-        // Update database without changing the image
-        $sql = "UPDATE `cate` SET `category` = '$cate', `created_at` = NOW() WHERE `id` = '$getID'";
+    //     if ($conn->query($sql)) {
+    //         header("Location: viewCate.php");
+    //         exit;
+    //     } else {
+    //         return "Error occurred while saving data: " . $conn->error;
+    //     }
+    // }
+    // public static function updateCategory($getID, $cate, $conn)
+    // {
+    //     // Update database without changing the image
+    //     $sql = "UPDATE `cate` SET `category` = '$cate', `created_at` = NOW() WHERE `id` = '$getID'";
 
-        if ($conn->query($sql)) {
-            header("Location: viewCate.php");
-            exit;
-        } else {
-            return "Error occurred while saving data: " . $conn->error;
-        }
-    }
+    //     if ($conn->query($sql)) {
+    //         header("Location: viewCate.php");
+    //         exit;
+    //     } else {
+    //         return "Error occurred while saving data: " . $conn->error;
+    //     }
+    // }
 
-    public static function setProducts($title, $img, $cate)
+    public static function setProducts($title, $img, $price, $sub)
     {
         $conn = Database::getConnect();
         $targetDir = "../uploads/Products/"; // Define your upload directory
@@ -81,17 +81,17 @@ class User
         }
 
         // Insert data into database
-        $sql = "INSERT INTO `products` (`img`, `title`, `category`, `created_at`) 
-                VALUES ('$filePath', '$title', '$cate', NOW())";
+        $sql = "INSERT INTO `products` (`img`, `title`, `price`, `subprice`, `created_at`) 
+                VALUES ('$filePath', '$title', '$price', '$sub', NOW())";
 
         if ($conn->query($sql)) {
-            header("Location: viewPro.php");
+            header("Location: viewIE.php");
             exit;
         } else {
             return "Error occurred while saving data: " . $conn->error;
         }
     }
-    public static function updateProducts($title, $img, $cate, $getID, $conn)
+    public static function updateProducts($title, $img, $price, $sub, $getID, $conn)
     {
         $targetDir = "../uploads/Products/"; // Define your upload directory
         
@@ -131,19 +131,19 @@ class User
             }
 
             // Update database with new image path
-            $sql = "UPDATE `products` SET `img` = ?, `title` = ?, `category` = ?, `created_at` = NOW() WHERE `id` = ?";
+            $sql = "UPDATE `products` SET `img` = ?, `title` = ?, `price` = ?, `subprice` = ?, `created_at` = NOW() WHERE `id` = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssi", $filePath, $title, $cate, $getID);
+            $stmt->bind_param("ssssi", $filePath, $title, $price, $sub, $getID);
         } else {
             // Update database without changing the image
-            $sql = "UPDATE `products` SET `title` = ?, `category` = ?, `created_at` = NOW() WHERE `id` = ?";
+            $sql = "UPDATE `products` SET `title` = ?, `price` = ?, `subprice` = ?, `created_at` = NOW() WHERE `id` = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ssi", $title, $cate, $getID);
+            $stmt->bind_param("sssi", $title, $price, $sub, $getID);
         }
 
         // Execute the statement
         if ($stmt->execute()) {
-            header("Location: viewPro.php");
+            header("Location: viewIE.php");
             exit;
         } else {
             return "Error occurred while saving data: " . $stmt->error;

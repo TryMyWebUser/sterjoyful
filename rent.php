@@ -23,7 +23,7 @@ include("header.php");
     </section>
     <!--====== End Hero Section ======-->
  
- <!--====== Start Pricing Section ======-->
+    <!--====== Start Pricing Section ======-->
     <section class="pricing-area pt-130 pb-90">
         <div class="container">
            <div class="row">

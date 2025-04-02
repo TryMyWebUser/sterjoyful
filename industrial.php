@@ -1,4 +1,5 @@
 <?php
+include "libs/load.php";
 include("header.php");
 ?> 
  
@@ -23,39 +24,48 @@ include("header.php");
     <!--====== End Hero Section ======-->
 
     <!--====== Start Products details Section ======-->
-    <section class="products-details-section pt-130 pb-50">
+    <section class="pricing-area pt-130 pb-90">
         <div class="container">
-            <div class="products-details-wrapper mb-60">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="products-gallery-wrap" data-aos="fade-up">
-                            <div class="products-big-slider mb-20">
-                                <div class="product-img">
-                                    <a href="assets/images/shop/product-details-03.jpg" target="_self" title=""
-                                        class="img-popup"><img src="assets/images/shop/product-details-03.jpg"
-                                            alt="Product Image"></a>
+           <div class="row">
+                <div class="col-lg-12">
+                    <div class="tab-content" id="myTabContent" data-aos="fade-up">
+                        <div class="tab-pane fade show active" id="all">
+                            <div class="row" data-masonry='{"percentPosition": true }'>
+                                <?php
+                                    $product = Operations::getProducts();
+                                    if (!empty($product)) {
+                                        foreach ($product as $pro) {
+                                ?>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="pricing-item pricing-item-one mb-40 border">
+                                        <div class="pricing-img">
+                                            <a href="#" target="_self" title="Equipment Image">
+                                                <img src="assets/<?= $pro['img'] ?>" alt="Pricing image">
+                                            </a>
+                                        </div>
+                                        <div class="p-3">
+                                            <h4><?= $pro['title'] ?></h4>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p><?= $pro['price'] !== "0" ? '₹' . $pro['price'] : "" ?></p>
+                                                <p>
+                                                    <del><?= $pro['subprice'] !== "0" ? '₹' . $pro['subprice'] : "" ?></del>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
+                                <?php } } else { echo "<p>Product Not Found.</p>"; } ?>
                             </div>
-
-
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="product-info" data-aos="fade-up">
-                            <h2>Industrial Equipment</h2>
-                            <p>Industrial processing equipment encompasses a wide range of products and spare parts that are destined for critical requirements within a variety of downstream manufacturing sectors. Such process equipment plays a major role in many reactions or operations that are not possible under normal environmental conditions related to temperature, pressure or safety purposes. Modern technological advancements in the industrial processing equipment used in industrial sectors such as etc. Can have a considerable impact on the speed, quality and volume of production levels and plant profitability. We at scrutinise all requirements to get a better understanding of the type of process equipment and accessories that are required by our clients.</p>
-                            <p>Each industry is constantly working on improving processes and machines, making them faster and more efficient. In many cases, the industrial processing equipment also becomes more specialized. This means that different industries may use many different commercial processing machines, each which are specialized for particular functions. </p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
     <!--====== End Products details Section ======-->
      
-      <!--====== Start Sponsor Section ======-->
+    <!--====== Start Sponsor Section ======-->
     <div class="sponsor">
         <div class="container">
             <div class="sponsor-slider-one">
@@ -96,6 +106,7 @@ include("header.php");
     <br>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 <?php
 include("footer.php");
 ?>    
