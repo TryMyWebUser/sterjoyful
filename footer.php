@@ -40,8 +40,7 @@
                                         <i class="fas fa-paper-plane"></i>
                                     </div>
                                     <div class="info">
-                                        <p><a href="mailto:demotext456@gmail.com">demotext456@gmail.com</a></p>
-                                        <p><a href="mailto:exapleemail@gmail.com">exapleemail@gmail.com</a></p>
+                                        <p><a href="mailto:sterjoyful@gmail.com">sterjoyful@gmail.com</a></p>
                                     </div>
                                 </li>
                                 <li>

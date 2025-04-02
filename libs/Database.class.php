@@ -11,7 +11,7 @@ class Database
             $server = "localhost";
             $username = "root";
             $password = "";
-            $dbname = "ster";
+            $dbname = "sterjoyful";
             // $server = "localhost";
             // $username = "trymywebsites_ster";
             // $password = "ster@2025";
