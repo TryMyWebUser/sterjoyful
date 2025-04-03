@@ -27,7 +27,7 @@
                         <span class="navlink-icon">
                             <i class="bi bi-postcard"></i>
                         </span>
-                        <span class="navlink">Industrial Equipment</span>
+                        <span class="navlink">Products Adding</span>
                     </div>
                     <div class="arrow-left">
                         <i class="bi bi-chevron-right"></i>

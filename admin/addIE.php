@@ -21,9 +21,10 @@
 			$title = $_POST['title'];
 			$price = $_POST['price'];
 			$sub = $_POST['sub'];
+            $cate = $_POST['category'];
 
 			// Call setAboutUs to insert data
-			$error = User::setProducts($title, $img, $price, $sub);
+			$error = User::setProducts($title, $img, $price, $sub, $cate);
 		}
 	}
 
@@ -67,6 +68,20 @@
 
                         <div class="component-area border-top">
                             <form class="row g-3 needs-validation" method="POST" enctype="multipart/form-data" novalidate>
+                                <div class="col-md-12">
+                                    <label for="validationCustom01" class="form-label">Select Page</label>
+                                    <select class="form-select" name="category" required>
+                                        <option></option>
+                                        <option value="rent">Rent</option>
+                                        <option value="ie">Industrial Equipment</option>
+                                    </select>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Select Any Option.
+                                    </div>
+                                </div>
 								<div class="col-md-12">
                                     <label for="validationCustom02" class="form-label">Product Image</label>
                                     <input type="file" class="form-control" name="img" id="validationCustom02" required />

@@ -35,6 +35,7 @@ include("header.php");
                                     $product = Operations::getProducts();
                                     if (!empty($product)) {
                                         foreach ($product as $pro) {
+                                            if ($pro['category'] === 'ie') {
                                 ?>
                                 <div class="col-lg-4 col-md-6 col-sm-12">
                                     <div class="pricing-item pricing-item-one mb-40 border">
@@ -54,7 +55,7 @@ include("header.php");
                                         </div>
                                     </div>
                                 </div>
-                                <?php } } else { echo "<p>Product Not Found.</p>"; } ?>
+                                <?php } } } else { echo "<p>Product Not Found.</p>"; } ?>
                             </div>
                         </div>
                         

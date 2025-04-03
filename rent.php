@@ -1,4 +1,5 @@
 <?php
+include "libs/load.php";
 include("header.php");
 ?>
 
@@ -30,71 +31,32 @@ include("header.php");
                 <div class="col-lg-12">
                     <div class="tab-content" id="myTabContent" data-aos="fade-up">
                         <div class="tab-pane fade show active" id="all">
-                            <div class="row">
+                            <div class="row" data-masonry='{"percentPosition": true }'>
+                                <?php
+                                    $product = Operations::getProducts();
+                                    if (!empty($product)) {
+                                        foreach ($product as $pro) {
+                                            if ($pro['category'] === 'rent') {
+                                ?>
                                 <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
+                                    <div class="pricing-item pricing-item-one mb-40 border">
                                         <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/price-1.jpg" alt="Pricing image"></a>
+                                            <a href="#" target="_self" title="Equipment Image">
+                                                <img src="assets/<?= $pro['img'] ?>" alt="Pricing image">
+                                            </a>
                                         </div>
-
+                                        <div class="p-3">
+                                            <h4><?= $pro['title'] ?></h4>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p><?= $pro['price'] !== "0" ? '₹' . $pro['price'] : "" ?></p>
+                                                <p>
+                                                    <del><?= $pro['subprice'] !== "0" ? '₹' . $pro['subprice'] : "" ?></del>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
-                                        <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/price-2.jpg" alt="Pricing image"></a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
-                                        <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/price-3.jpg" alt="Pricing image"></a>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
-                                        <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/1.jpg" alt="Pricing image"></a>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
-                                        <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/2.jpg" alt="Pricing image"></a>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
-                                        <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/3.jpg" alt="Pricing image"></a>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
-                                        <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/4.jpg" alt="Pricing image"></a>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="pricing-item pricing-item-one mb-40">
-                                        <div class="pricing-img">
-                                            <a href="#" target="_self" title="Equipment Image"><img src="assets/images/pricing/5.jpg" alt="Pricing image"></a>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
+                                <?php } } } else { echo "<p>Product Not Found.</p>"; } ?>
                             </div>
                         </div>
                         
@@ -104,6 +66,8 @@ include("header.php");
         </div>
     </section>
     <!--====== End Pricing Section ======-->
+
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 <?php
 include("footer.php");
 ?>    

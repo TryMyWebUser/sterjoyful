@@ -52,10 +52,14 @@ class User
     //     }
     // }
 
-    public static function setProducts($title, $img, $price, $sub)
+    public static function setProducts($title, $img, $price, $sub, $cate)
     {
         $conn = Database::getConnect();
-        $targetDir = "../uploads/Products/"; // Define your upload directory
+        if ($cate === 'ie') {
+            $targetDir = "../uploads/Products/ie/"; // Define your upload directory
+        } else {
+            $targetDir = "../uploads/Products/"; // Define your upload directory
+        }
         
         if (!is_dir($targetDir)) {
             // Create directory with proper permissions
@@ -81,8 +85,8 @@ class User
         }
 
         // Insert data into database
-        $sql = "INSERT INTO `products` (`img`, `title`, `price`, `subprice`, `created_at`) 
-                VALUES ('$filePath', '$title', '$price', '$sub', NOW())";
+        $sql = "INSERT INTO `products` (`img`, `title`, `price`, `subprice`, `category`, `created_at`) 
+                VALUES ('$filePath', '$title', '$price', '$sub', '$cate', NOW())";
 
         if ($conn->query($sql)) {
             header("Location: viewIE.php");
@@ -91,9 +95,13 @@ class User
             return "Error occurred while saving data: " . $conn->error;
         }
     }
-    public static function updateProducts($title, $img, $price, $sub, $getID, $conn)
+    public static function updateProducts($title, $img, $price, $sub, $cate, $getID, $conn)
     {
-        $targetDir = "../uploads/Products/"; // Define your upload directory
+        if ($cate === 'ie') {
+            $targetDir = "../uploads/Products/ie/"; // Define your upload directory
+        } else {
+            $targetDir = "../uploads/Products/"; // Define your upload directory
+        }
         
         if (!is_dir($targetDir)) {
             // Create directory with proper permissions
@@ -131,14 +139,14 @@ class User
             }
 
             // Update database with new image path
-            $sql = "UPDATE `products` SET `img` = ?, `title` = ?, `price` = ?, `subprice` = ?, `created_at` = NOW() WHERE `id` = ?";
+            $sql = "UPDATE `products` SET `img` = ?, `title` = ?, `price` = ?, `subprice` = ?, `category` = ?, `created_at` = NOW() WHERE `id` = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("ssssi", $filePath, $title, $price, $sub, $getID);
+            $stmt->bind_param("sssssi", $filePath, $title, $price, $sub, $cate, $getID);
         } else {
             // Update database without changing the image
-            $sql = "UPDATE `products` SET `title` = ?, `price` = ?, `subprice` = ?, `created_at` = NOW() WHERE `id` = ?";
+            $sql = "UPDATE `products` SET `title` = ?, `price` = ?, `subprice` = ?, `category` = ?, `created_at` = NOW() WHERE `id` = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssi", $title, $price, $sub, $getID);
+            $stmt->bind_param("ssssi", $title, $price, $sub, $cate, $getID);
         }
 
         // Execute the statement

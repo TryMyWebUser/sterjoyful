@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2025 at 01:13 PM
+-- Generation Time: Apr 03, 2025 at 02:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -54,6 +54,7 @@ CREATE TABLE `products` (
   `img` varchar(1024) NOT NULL,
   `price` varchar(100) NOT NULL,
   `subprice` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -61,32 +62,40 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `img`, `price`, `subprice`, `created_at`) VALUES
-(6, 'Boom Lift Machine', '../uploads/Products/boom lift Machine.jpeg', '0', '0', '2025-04-02 16:09:23'),
-(7, 'Tamping Rammer', '../uploads/Products/Tamping Rammer.jpeg', '0', '0', '2025-04-02 16:10:05'),
-(8, 'Aluminium Wheel Scaffolding', '../uploads/Products/Aluminium Wheel Scaffolding.jpeg', '0', '0', '2025-04-02 16:10:28'),
-(9, 'Adjustable Aluminium Ladder', '../uploads/Products/Adjustable Aluminium Ladder.jpeg', '0', '0', '2025-04-02 16:10:47'),
-(10, 'Adjustable Props', '../uploads/Products/Adjustable Props.jpeg', '0', '0', '2025-04-02 16:11:03'),
-(11, 'Centering Sheet', '../uploads/Products/Centering Sheet.jpeg', '0', '0', '2025-04-02 16:11:25'),
-(12, 'Chain Block', '../uploads/Products/Chain Block.jpeg', '0', '0', '2025-04-02 16:11:41'),
-(13, 'Adjustable Span', '../uploads/Products/Adjustable Span.jpeg', '0', '0', '2025-04-02 16:11:58'),
-(14, 'Generator', '../uploads/Products/Generator.jpeg', '0', '0', '2025-04-02 16:12:20'),
-(15, 'Movable Aluminium Ladder', '../uploads/Products/Movable Aluminium Ladder.jpeg', '0', '0', '2025-04-02 16:12:33'),
-(16, 'Column Box', '../uploads/Products/Column Box.jpeg', '0', '0', '2025-04-02 16:12:46'),
-(17, 'Air Compressor', '../uploads/Products/Air Compressor.jpeg', '0', '0', '2025-04-02 16:13:00'),
-(18, 'Welding Machine', '../uploads/Products/Welding Machine.jpeg', '0', '0', '2025-04-02 16:13:16'),
-(19, 'Screw Compressor', '../uploads/Products/Screw Compressor.jpeg', '0', '0', '2025-04-02 16:13:33'),
-(20, 'Earth Rammer', '../uploads/Products/Earth Rammer.jpeg', '0', '0', '2025-04-02 16:13:57'),
-(21, 'Wheel Barrow', '../uploads/Products/Wheel Barrow.jpeg', '0', '0', '2025-04-02 16:14:11'),
-(22, 'Cuplock Scaffolding', '../uploads/Products/Cuplock Scaffolding.jpeg', '0', '0', '2025-04-02 16:14:26'),
-(23, 'Staircase Steps Scaffolding', '../uploads/Products/Staircase Steps Scaffolding.jpeg', '0', '0', '2025-04-02 16:14:43'),
-(24, 'Platform Jali', '../uploads/Products/Platform Jali.jpeg', '0', '0', '2025-04-02 16:18:02'),
-(25, 'Scissor Lift', '../uploads/Products/Scissor Lift.jpeg', '0', '0', '2025-04-02 16:18:17'),
-(26, 'Concrete Vibrating Machine', '../uploads/Products/Concrete Vibrating Machine.jpeg', '0', '0', '2025-04-02 16:18:31'),
-(27, 'Concrete Mixer Machine', '../uploads/Products/Concrete Mixer Machine.jpeg', '0', '0', '2025-04-02 16:18:48'),
-(28, 'Vacuum Cleaner', '../uploads/Products/Vacuum Cleaner.jpeg', '0', '0', '2025-04-02 16:19:11'),
-(29, 'Cutt Of Machine', '../uploads/Products/Cutt Of Machine.jpeg', '0', '0', '2025-04-02 16:19:26'),
-(30, 'Mini Hoist Lift', '../uploads/Products/Mini Hoist Lift.jpeg', '0', '0', '2025-04-02 16:19:40');
+INSERT INTO `products` (`id`, `title`, `img`, `price`, `subprice`, `category`, `created_at`) VALUES
+(6, 'Boom Lift Machine', '../uploads/Products/boom lift Machine.jpeg', '0', '0', 'rent', '2025-04-03 17:45:18'),
+(7, 'Tamping Rammer', '../uploads/Products/Tamping Rammer.jpeg', '0', '0', 'rent', '2025-04-03 17:46:18'),
+(8, 'Aluminium Wheel Scaffolding', '../uploads/Products/Aluminium Wheel Scaffolding.jpeg', '0', '0', 'rent', '2025-04-02 16:10:28'),
+(9, 'Adjustable Aluminium Ladder', '../uploads/Products/Adjustable Aluminium Ladder.jpeg', '0', '0', 'rent', '2025-04-02 16:10:47'),
+(10, 'Adjustable Props', '../uploads/Products/Adjustable Props.jpeg', '0', '0', 'rent', '2025-04-02 16:11:03'),
+(11, 'Centering Sheet', '../uploads/Products/Centering Sheet.jpeg', '0', '0', 'rent', '2025-04-02 16:11:25'),
+(12, 'Chain Block', '../uploads/Products/Chain Block.jpeg', '0', '0', 'rent', '2025-04-02 16:11:41'),
+(13, 'Adjustable Span', '../uploads/Products/Adjustable Span.jpeg', '0', '0', 'rent', '2025-04-02 16:11:58'),
+(14, 'Generator', '../uploads/Products/Generator.jpeg', '0', '0', 'rent', '2025-04-02 16:12:20'),
+(15, 'Movable Aluminium Ladder', '../uploads/Products/Movable Aluminium Ladder.jpeg', '0', '0', 'rent', '2025-04-02 16:12:33'),
+(16, 'Column Box', '../uploads/Products/Column Box.jpeg', '0', '0', 'rent', '2025-04-02 16:12:46'),
+(17, 'Air Compressor', '../uploads/Products/Air Compressor.jpeg', '0', '0', 'rent', '2025-04-02 16:13:00'),
+(18, 'Welding Machine', '../uploads/Products/Welding Machine.jpeg', '0', '0', 'rent', '2025-04-02 16:13:16'),
+(19, 'Screw Compressor', '../uploads/Products/Screw Compressor.jpeg', '0', '0', 'rent', '2025-04-02 16:13:33'),
+(20, 'Earth Rammer', '../uploads/Products/Earth Rammer.jpeg', '0', '0', 'rent', '2025-04-02 16:13:57'),
+(21, 'Wheel Barrow', '../uploads/Products/Wheel Barrow.jpeg', '0', '0', 'rent', '2025-04-02 16:14:11'),
+(22, 'Cuplock Scaffolding', '../uploads/Products/Cuplock Scaffolding.jpeg', '0', '0', 'rent', '2025-04-02 16:14:26'),
+(23, 'Staircase Steps Scaffolding', '../uploads/Products/Staircase Steps Scaffolding.jpeg', '0', '0', 'rent', '2025-04-02 16:14:43'),
+(24, 'Platform Jali', '../uploads/Products/Platform Jali.jpeg', '0', '0', 'rent', '2025-04-02 16:18:02'),
+(25, 'Scissor Lift', '../uploads/Products/Scissor Lift.jpeg', '0', '0', 'rent', '2025-04-02 16:18:17'),
+(26, 'Concrete Vibrating Machine', '../uploads/Products/Concrete Vibrating Machine.jpeg', '0', '0', 'rent', '2025-04-02 16:18:31'),
+(27, 'Concrete Mixer Machine', '../uploads/Products/Concrete Mixer Machine.jpeg', '0', '0', 'rent', '2025-04-02 16:18:48'),
+(28, 'Vacuum Cleaner', '../uploads/Products/Vacuum Cleaner.jpeg', '0', '0', 'rent', '2025-04-02 16:19:11'),
+(29, 'Cutt Of Machine', '../uploads/Products/Cutt Of Machine.jpeg', '0', '0', 'rent', '2025-04-02 16:19:26'),
+(30, 'Mini Hoist Lift', '../uploads/Products/Mini Hoist Lift.jpeg', '0', '0', 'rent', '2025-04-02 16:19:40'),
+(31, 'Chain Block', '../uploads/Products/ie/Chain Block.jpeg', '0', '0', 'ie', '2025-04-03 17:57:29'),
+(32, 'Welding Machine', '../uploads/Products/ie/Welding Machine.jpeg', '0', '0', 'ie', '2025-04-03 18:05:21'),
+(33, 'Screw Compressor', '../uploads/Products/ie/Screw Compressor.jpeg', '0', '0', 'ie', '2025-04-03 18:05:57'),
+(34, 'Air Compressor', '../uploads/Products/ie/Air Compressor.jpeg', '0', '0', 'ie', '2025-04-03 18:06:45'),
+(35, 'Cutt Of Machine', '../uploads/Products/ie/Cutt Of Machine.jpeg', '0', '0', 'ie', '2025-04-03 18:07:11'),
+(36, 'Generator', '../uploads/Products/ie/Generator.jpeg', '0', '0', 'ie', '2025-04-03 18:07:35'),
+(37, 'boom lift Machine', '../uploads/Products/ie/boom lift Machine.jpeg', '0', '0', 'ie', '2025-04-03 18:07:54'),
+(38, 'Angle Grinding Machine', '../uploads/Products/ie/Angle Grinding Machine.jpg', '0', '0', 'ie', '2025-04-03 18:08:46');
 
 --
 -- Indexes for dumped tables
@@ -118,7 +127,7 @@ ALTER TABLE `auth`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
